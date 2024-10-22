@@ -9,6 +9,7 @@ class SettingsAPI(GenericViewSet,
                   mixins.CreateModelMixin,
                   mixins.RetrieveModelMixin,
                   mixins.UpdateModelMixin,
-                  mixins.DestroyModelMixin):
+                  mixins.DestroyModelMixin,
+                  mixins.ListModelMixin):
     queryset = Settings.objects.all()
     serializer_class = SettingsSerializers
